@@ -1,0 +1,9 @@
+<div id="new">
+  <%= simple_form_for @restaurant do |f|%>
+    <%= f.input :name, placeholder: "Name...", label: false, class: "whatever" %>
+    <%= f.input :address, placeholder: "Address..." %>
+    <%= f.input :phone_number, placeholder: "Phone number..." %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.submit %>
+  <% end %>
+</div>

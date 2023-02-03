@@ -1,0 +1,18 @@
+<div id="index">
+  <div class="restaurant-list">
+    <% @restaurants.each do |r| %>
+      <%= link_to restaurant_path(r) do %>
+        <div class="restaurant-list__card">
+          <img src="<%= r.image %>" alt="<%= r.name %> restaurant interior picture" class="card__image">
+          <div class="card__content">
+            <h3><%= r.name %></h3>
+            <div>
+              <p><%= r.address %></p>
+              <p><%= r.phone_number %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

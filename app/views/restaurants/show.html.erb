@@ -1,0 +1,6 @@
+<div id="show">
+  <h1><%= @restaurant.name %></h1>
+  <p><%= (@restaurant.reviews.sum { |e| e.rating } / @restaurant.reviews.length) if @restaurant.reviews.length.positive? %></p>
+  <%= link_to "Rate it", new_restaurant_review_path(@restaurant) %>
+  <%= link_to "Back to main page", restaurants_path %>
+</div>
